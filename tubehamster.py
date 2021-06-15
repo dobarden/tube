@@ -3,16 +3,6 @@ import tkinter as tk
 from tkinter import ttk
 
 
-# def progress(streams, chunk: bytes, bytes_remaining: int):
-
-#     """Progress bar"""
-
-#     contentsize = video.filesize
-#     size = contentsize - bytes_remaining
-
-#     print('[Download progress]:' % (
-#     '█' * int(size*20/contentsize), ' '*(20-int(size*20/contentsize)), float(size/contentsize*100)), end='')
-
 def mp4_download(download_file_type):
     
     def progress(streams, chunk: bytes, bytes_remaining: int):
@@ -59,11 +49,11 @@ username_label.grid(row=1, column=0, padx=10)
 username_entry = ttk.Entry(window, width=45, textvariable=url_for_download)
 username_entry.grid(row=1, column=1, columnspan=3, padx=5)
 
-#Download button
+#Download video button
 mp4_button = ttk.Button(window, text='Download video ', width=25, command=lambda: mp4_download(1))
 mp4_button.grid(row=2, column=0, columnspan=2, padx=5, pady=10)
 
-#Cancel button
+#Download audio button
 audio_button = ttk.Button(window, text='Download audio', width=25, command=lambda: mp4_download(2))
 audio_button.grid(row=2, column=2, columnspan=2, padx=5, pady=10)
 
