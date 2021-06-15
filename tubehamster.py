@@ -49,11 +49,11 @@ username_label.grid(row=1, column=0, padx=10)
 username_entry = ttk.Entry(window, width=45, textvariable=url_for_download)
 username_entry.grid(row=1, column=1, columnspan=3, padx=5)
 
-#Download video button
+#Download video button. Lambda in command is needed because you can't just call a function with arguments.
 mp4_button = ttk.Button(window, text='Download video ', width=25, command=lambda: mp4_download(1))
 mp4_button.grid(row=2, column=0, columnspan=2, padx=5, pady=10)
 
-#Download audio button
+#Download audio button.  Lambda in command is needed because you can't just call a function with arguments.
 audio_button = ttk.Button(window, text='Download audio', width=25, command=lambda: mp4_download(2))
 audio_button.grid(row=2, column=2, columnspan=2, padx=5, pady=10)
 
